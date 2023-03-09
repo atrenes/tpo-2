@@ -4,14 +4,19 @@ import functions.Function;
 
 import java.text.DecimalFormat;
 
-public class LogTwo extends Function {
-    private final static int BASIS = 2;
+public class Log extends Function {
+
+
+    private final int basis;
 
     private final Ln lnFunc;
+
     private final DecimalFormat df = new DecimalFormat("#.#####");
 
-    public LogTwo(double accuracy, Ln lnFunc) {
+    public Log(double accuracy, Ln lnFunc, int basis) {
+
         super(accuracy);
+        this.basis = basis;
         this.lnFunc = lnFunc;
     }
 
@@ -22,6 +27,6 @@ public class LogTwo extends Function {
         } else if (x == Double.POSITIVE_INFINITY) {
             return Double.POSITIVE_INFINITY;
         }
-        return Double.parseDouble(df.format(lnFunc.compute(x) / lnFunc.compute(BASIS)).replace(",", "."));
+        return Double.parseDouble(df.format(lnFunc.compute(x) / lnFunc.compute(basis)).replace(",", "."));
     }
 }
