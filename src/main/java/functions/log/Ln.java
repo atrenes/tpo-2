@@ -1,5 +1,6 @@
 package functions.log;
 
+<<<<<<< HEAD
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 
@@ -40,3 +41,10 @@ public class Ln {
         return res;
     }
 }
+=======
+import functions.Function;
+
+public class Ln extends Function {
+
+}
+>>>>>>> origin/master
