@@ -1,4 +1,8 @@
 package functions.trig;
 
-public class Sin {
+import functions.Function;
+
+public class Sin extends Function {
+
+
 }
