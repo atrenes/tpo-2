@@ -1,12 +1,4 @@
-import functions.log.Ln;
-import functions.log.Log10;
-import functions.log.Log3;
-import functions.log.Log5;
-import functions.trig.Cos;
-import functions.trig.Sin;
-
-import functions.System;
-import static java.lang.System.out;
+import logger.CSVLogger;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,5 +14,9 @@ public class Main {
             out.print(x + ", ");
             out.println(system.compute(x));
         }*/
+
+        CSVLogger logger = new CSVLogger();
+
+        logger.writeCSV("System", -5d, 100d, 1);
     }
 }
